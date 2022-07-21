@@ -34,10 +34,10 @@ const loginSchema = object({
   email: string()
     .nonempty('Email address is required')
     .email('Email Address is invalid'),
-  password: string()
-    .nonempty('Password is required')
-    .min(8, 'Password must be more than 8 characters')
-    .max(32, 'Password must be less than 32 characters'),
+  // password: string()
+  //   .nonempty('Password is required')
+  //   .min(8, 'Password must be more than 8 characters')
+  //   .max(32, 'Password must be less than 32 characters'),
 });
 
 export type LoginInput = TypeOf<typeof loginSchema>;
@@ -150,7 +150,7 @@ const LoginPage = () => {
             }}
           >
             <FormInput name='email' label='Email Address' type='email' />
-            <FormInput name='password' label='Password' type='password' />
+            {/* <FormInput name='password' label='Password' type='password' /> */}
 
             <Typography sx={{ fontSize: '0.9rem', mb: '1rem' }}>
               Need an account? <LinkItem to='/register'>Sign Up Here</LinkItem>

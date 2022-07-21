@@ -9,13 +9,13 @@ const BASE_URL = process.env.REACT_APP_SERVER_ENDPOINT as string;
 export const authApi = createApi({
   reducerPath: 'authApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: `${BASE_URL}/api/auth/`,
+    baseUrl: `${BASE_URL}/test/v1/`,
   }),
   endpoints: (builder) => ({
     registerUser: builder.mutation<IGenericResponse, RegisterInput>({
       query(data) {
         return {
-          url: 'register',
+          url: 'transaction',
           method: 'POST',
           body: data,
         };
@@ -27,8 +27,8 @@ export const authApi = createApi({
     >({
       query(data) {
         return {
-          url: 'login',
-          method: 'POST',
+          url: 'get-key',
+          method: 'GET',
           body: data,
           credentials: 'include',
         };

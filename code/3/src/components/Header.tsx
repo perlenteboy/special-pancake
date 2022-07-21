@@ -112,7 +112,7 @@ const Header = () => {
                 onClick={() => navigate('/profile')}
               >
                 <IconButton sx={{ p: 0 }}>
-                  <Avatar alt='Remy Sharp' src='/static/images/avatar/2.jpg' />
+                  <Avatar alt='S'/>
                 </IconButton>
               </Tooltip>
             </Box>
